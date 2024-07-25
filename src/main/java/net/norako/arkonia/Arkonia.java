@@ -2,6 +2,7 @@ package net.norako.arkonia;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.norako.arkonia.block.ArkoniaBlocks;
 import net.norako.arkonia.item.ArkoniaItemGroup;
 import net.norako.arkonia.item.ArkoniaItems;
 import org.slf4j.Logger;
@@ -13,7 +14,8 @@ public class Arkonia implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ArkoniaBlocks.registerArkoniaBlocks();
 		ArkoniaItemGroup.registerItemGroups();
-		ArkoniaItems.registerModItems();
+		ArkoniaItems.registerArkoniaItems();
 	}
 }

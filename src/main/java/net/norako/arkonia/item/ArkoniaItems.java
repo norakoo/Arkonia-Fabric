@@ -41,22 +41,11 @@ public class ArkoniaItems {
 
     // XYLOGIA
 
-    private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
-        entries.add(RAW_MAGMITITE);
-        entries.add(MAGMITITE_INGOT);
-        entries.add(RAW_XYOPHITE);
-        entries.add(XYOPHITE_INGOT);
-        entries.add(BELITE_INGOT);
-        entries.add(AVIDITE_INGOT);
-    }
-
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Arkonia.MOD_ID, name), item);
     }
 
-    public static void registerModItems(){
-        Arkonia.LOGGER.info("Registering Mod Items for " + Arkonia.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ArkoniaItems::addItemsToIngredientTabItemGroup);
+    public static void registerArkoniaItems(){
+        Arkonia.LOGGER.info("Registering Arkonia Items for " + Arkonia.MOD_ID);
     }
 }

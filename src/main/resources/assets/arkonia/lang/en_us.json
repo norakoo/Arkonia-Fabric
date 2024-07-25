@@ -6,5 +6,10 @@
   "item.arkonia.belite_ingot": "Belite Ingot",
   "item.arkonia.avidite_ingot": "Avidite Ingot",
 
-  "itemgroup.arkonia_vanilla": "Arkonia: Vanilla"
+  "itemgroup.arkonia_vanilla": "Arkonia: Vanilla",
+
+  "block.arkonia.deepslate_magmitite_ore": "Deepslate Magmitite Ore",
+  "block.arkonia.deepslate_xyophite_ore": "Deepslate Xyophite Ore",
+  "block.arkonia.deepslate_belite_ore": "Deepslate Belite Ore",
+  "block.arkonia.deepslate_avidite_ore": "Deepslate Avidite Ore"
 }

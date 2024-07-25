@@ -8,17 +8,22 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.norako.arkonia.Arkonia;
+import net.norako.arkonia.block.ArkoniaBlocks;
 
 public class ArkoniaItemGroup {
     public static final ItemGroup ARKONIA_VANILLA = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Arkonia.MOD_ID, "arkonia_vanilla"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.arkonia_vanilla"))
                     .icon(() -> new ItemStack(ArkoniaItems.RAW_MAGMITITE)).entries((displayContext, entries) -> {
+                        entries.add(ArkoniaBlocks.DEEPSLATE_MAGMITITE_ORE);
                         entries.add(ArkoniaItems.RAW_MAGMITITE);
                         entries.add(ArkoniaItems.MAGMITITE_INGOT);
+                        entries.add(ArkoniaBlocks.DEEPSLATE_XYOPHITE_ORE);
                         entries.add(ArkoniaItems.RAW_XYOPHITE);
                         entries.add(ArkoniaItems.XYOPHITE_INGOT);
+                        entries.add(ArkoniaBlocks.DEEPSLATE_BELITE_ORE);
                         entries.add(ArkoniaItems.BELITE_INGOT);
+                        entries.add(ArkoniaBlocks.DEEPSLATE_AVIDITE_ORE);
                         entries.add(ArkoniaItems.AVIDITE_INGOT);
                     }).build());
 
