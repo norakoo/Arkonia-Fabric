@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "arkonia",
+	"version": "${version}",
+	"name": "Arkonia",
+	"description": "Arkonia is a mod that aim to add any features into Minecraft.",
+	"authors": [
+		"Norako_"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/norakoo/Arkonia-Fabric"
+	},
+	"license": "MIT",
+	"icon": "assets/arkonia/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.norako.arkonia.Arkonia"
+		],
+		"fabric-datagen": [
+			"net.norako.arkonia.ArkoniaDataGenerator"
+		]
+	},
+	"mixins": [
+		"arkonia.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
