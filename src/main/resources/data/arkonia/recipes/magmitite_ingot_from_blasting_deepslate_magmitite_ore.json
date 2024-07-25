@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "group": "magmitite_ingot",
+  "ingredient": {
+    "item": "arkonia:deepslate_magmitite_ore"
+  },
+  "result": "arkonia:magmitite_ingot"
+}
