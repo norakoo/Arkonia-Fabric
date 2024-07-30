@@ -30,24 +30,6 @@ public class ArkoniaConfiguredFeatures {
 
     // END
 
-    // ARKONIA
-
-    // BIRUNIA
-
-    // ICEOLIA
-
-    // IRIDIA
-
-    // LUMINIA
-
-    // STELLARIA
-
-    // VELIA
-
-    // ZYPHIA
-
-    // XYOGIA
-
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplacables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplacables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);

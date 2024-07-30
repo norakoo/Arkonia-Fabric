@@ -20,23 +20,5 @@ public class ArkoniaOreGeneration {
         // NETHER
 
         // END
-
-        // ARKONIA
-
-        // BIRUNIA
-
-        // ICEOLIA
-
-        // IRIDIA
-
-        // LUMINIA
-
-        // STELLARIA
-
-        // VELIA
-
-        // ZYPHIA
-
-        // XYLOGIA
     }
 }

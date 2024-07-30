@@ -26,24 +26,6 @@ public class ArkoniaPlacedFeatures {
 
     // END
 
-    // ARKONIA
-
-    // BIRUNIA
-
-    // ICEOLIA
-
-    // IRIDIA
-
-    // LUMINIA
-
-    // STELLARIA
-
-    // VELIA
-
-    // ZYPHIA
-
-    // XYLOGIA
-
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 

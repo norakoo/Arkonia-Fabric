@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.ModelIds;
 import net.minecraft.data.client.Models;
 import net.norako.arkonia.block.ArkoniaBlocks;
 import net.norako.arkonia.item.ArkoniaItems;
@@ -21,27 +22,18 @@ public class ArkoniaModelPovider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ArkoniaBlocks.DEEPSLATE_BELITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ArkoniaBlocks.DEEPSLATE_AVIDITE_ORE);
 
+        blockStateModelGenerator.registerLog(ArkoniaBlocks.MAPLE_LOG).log(ArkoniaBlocks.MAPLE_LOG).wood(ArkoniaBlocks.MAPLE_WOOD);
+        blockStateModelGenerator.registerLog(ArkoniaBlocks.STRIPPED_MAPLE_LOG).log(ArkoniaBlocks.STRIPPED_MAPLE_LOG).wood(ArkoniaBlocks.STRIPPED_MAPLE_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(ArkoniaBlocks.MAPLE_LEAVES);
+
+        BlockStateModelGenerator.BlockTexturePool maple_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ArkoniaBlocks.MAPLE_PLANKS);
+        maple_pool.family(ArkoniaBlocks.MAPLE_FAMILY);
+
+        blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.FROZEN_ZOMBIE_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         // NETHER
 
         // END
 
-        // ARKONIA
-
-        // BIRUNIA
-
-        // ICEOLIA
-
-        // IRIDIA
-
-        // LUMINIA
-
-        // STELLARIA
-
-        // VELIA
-
-        // ZYPHIA
-
-        // XYLOGIA
     }
 
     @Override
@@ -54,26 +46,10 @@ public class ArkoniaModelPovider extends FabricModelProvider {
         itemModelGenerator.register(ArkoniaItems.BELITE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ArkoniaItems.AVIDITE_INGOT, Models.GENERATED);
 
+        itemModelGenerator.register(ArkoniaItems.HANGING_MAPLE_SIGN, Models.GENERATED);
         // NETHER
 
         // END
 
-        // ARKONIA
-
-        // BIRUNIA
-
-        // ICEOLIA
-
-        // IRIDIA
-
-        // LUMINIA
-
-        // STELLARIA
-
-        // VELIA
-
-        // ZYPHIA
-
-        // XYLOGIA
     }
 }

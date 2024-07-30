@@ -70,22 +70,5 @@ public class ArkoniaRecipeProvider extends FabricRecipeProvider {
 
         // END
 
-        // ARKONIA
-
-        // BIRUNIA
-
-        // ICEOLIA
-
-        // IRIDIA
-
-        // LUMINIA
-
-        // STELLARIA
-
-        // VELIA
-
-        // ZYPHIA
-
-        // XYLOGIA
     }
 }

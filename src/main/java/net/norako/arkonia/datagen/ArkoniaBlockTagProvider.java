@@ -28,5 +28,11 @@ public class ArkoniaBlockTagProvider extends FabricTagProvider.BlockTagProvider 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ArkoniaBlocks.DEEPSLATE_BELITE_ORE)
                 .add(ArkoniaBlocks.DEEPSLATE_AVIDITE_ORE);
+
+        getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
+                .add(ArkoniaBlocks.MAPLE_LOG)
+                .add(ArkoniaBlocks.MAPLE_WOOD)
+                .add(ArkoniaBlocks.STRIPPED_MAPLE_LOG)
+                .add(ArkoniaBlocks.STRIPPED_MAPLE_WOOD);
     }
 }

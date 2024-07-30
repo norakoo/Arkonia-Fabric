@@ -15,6 +15,15 @@ public class ArkoniaItemGroup {
             new Identifier(Arkonia.MOD_ID, "arkonia_vanilla"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.arkonia_vanilla"))
                     .icon(() -> new ItemStack(ArkoniaItems.RAW_MAGMITITE)).entries((displayContext, entries) -> {
+                        entries.add(ArkoniaBlocks.MAPLE_LOG);
+                        entries.add(ArkoniaBlocks.MAPLE_WOOD);
+                        entries.add(ArkoniaBlocks.STRIPPED_MAPLE_LOG);
+                        entries.add(ArkoniaBlocks.STRIPPED_MAPLE_WOOD);
+                        entries.add(ArkoniaBlocks.MAPLE_PLANKS);
+                        entries.add(ArkoniaBlocks.MAPLE_LEAVES);
+                        entries.add(ArkoniaItems.MAPLE_SIGN);
+                        entries.add(ArkoniaItems.HANGING_MAPLE_SIGN);
+
                         entries.add(ArkoniaBlocks.DEEPSLATE_MAGMITITE_ORE);
                         entries.add(ArkoniaItems.RAW_MAGMITITE);
                         entries.add(ArkoniaItems.MAGMITITE_INGOT);
@@ -25,6 +34,8 @@ public class ArkoniaItemGroup {
                         entries.add(ArkoniaItems.BELITE_INGOT);
                         entries.add(ArkoniaBlocks.DEEPSLATE_AVIDITE_ORE);
                         entries.add(ArkoniaItems.AVIDITE_INGOT);
+
+                        entries.add(ArkoniaItems.FROZEN_ZOMBIE_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups() {
