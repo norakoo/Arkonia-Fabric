@@ -6,6 +6,7 @@
   "item.arkonia.belite_ingot": "Belite Ingot",
   "item.arkonia.avidite_ingot": "Avidite Ingot",
   "item.arkonia.frozen_zombie_spawn_egg": "Frozen Zombie Spawn Egg",
+  "item.arkonia.mountaineer_spawn_egg": "Mountaineer Spawn Egg",
 
   "itemgroup.arkonia_vanilla": "Arkonia: Vanilla",
 
@@ -24,5 +25,6 @@
   "block.arkonia.maple_hanging_sign": "Maple Hanging Sign",
   "block.arkonia.maple_wall_hanging_sign": "Maple Wall Hanging Sign",
 
-  "entity.arkonia.frozen_zombie": "Frozen Zombie"
+  "entity.arkonia.frozen_zombie": "Frozen Zombie",
+  "entity.arkonia.mountaineer": "Mountaineer"
 }

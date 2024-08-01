@@ -36,6 +36,7 @@ public class ArkoniaItemGroup {
                         entries.add(ArkoniaItems.AVIDITE_INGOT);
 
                         entries.add(ArkoniaItems.FROZEN_ZOMBIE_SPAWN_EGG);
+                        entries.add(ArkoniaItems.MOUNTAINEER_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups() {

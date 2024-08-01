@@ -3,7 +3,8 @@
 	"package": "net.norako.arkonia.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"RaidMixin",
+		"RaidAccessor"
 	],
 	"injectors": {
 		"defaultRequire": 1

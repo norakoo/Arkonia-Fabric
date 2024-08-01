@@ -1,0 +1,55 @@
+{
+  "frozen_zombie_ambient": {
+    "subtitle": "sounds.arkonia.frozen_zombie_ambient",
+    "sounds": [
+      "arkonia:frozen_zombie_idle01",
+      "arkonia:frozen_zombie_idle02",
+      "arkonia:frozen_zombie_idle03"
+    ]
+  },
+  "frozen_zombie_hurt": {
+    "subtitle": "sounds.arkonia.frozen_zombie_hurt",
+    "sounds": [
+      "arkonia:frozen_zombie_hurt01",
+      "arkonia:frozen_zombie_hurt02",
+      "arkonia:frozen_zombie_hurt03"
+    ]
+  },
+  "frozen_zombie_death": {
+    "subtitle": "sounds.arkonia.frozen_zombie_death",
+    "sounds": [
+      "arkonia:frozen_zombie_death01",
+      "arkonia:frozen_zombie_death02",
+      "arkonia:frozen_zombie_death03",
+      "arkonia:frozen_zombie_death04"
+    ]
+  },
+  "mountaineer_ambient": {
+    "subtitle": "sounds.arkonia.mountaineer_ambient",
+    "sounds": [
+      "arkonia:mountaineer_idle01",
+      "arkonia:mountaineer_idle02",
+      "arkonia:mountaineer_idle03",
+      "arkonia:mountaineer_idle04"
+    ]
+  },
+  "mountaineer_hurt": {
+    "subtitle": "sounds.arkonia.mountaineer_hurt",
+    "sounds": [
+      "arkonia:mountaineer_hurt01",
+      "arkonia:mountaineer_hurt02",
+      "arkonia:mountaineer_hurt03",
+      "arkonia:mountaineer_hurt04",
+      "arkonia:mountaineer_hurt05"
+    ]
+  },
+  "mountaineer_death": {
+    "subtitle": "sounds.arkonia.mountaineer_death",
+    "sounds": [
+      "arkonia:mountaineer_death01",
+      "arkonia:mountaineer_death02",
+      "arkonia:mountaineer_death03",
+      "arkonia:mountaineer_death04"
+    ]
+  }
+}

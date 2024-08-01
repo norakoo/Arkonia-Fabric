@@ -10,11 +10,13 @@ import net.minecraft.client.util.SpriteIdentifier;
 import net.norako.arkonia.block.ArkoniaBlocks;
 import net.norako.arkonia.entity.ArkoniaEntities;
 import net.norako.arkonia.entity.client.overworld.FrozenZombieRenderer;
+import net.norako.arkonia.entity.client.overworld.illager.MountaineerRenderer;
 
 public class ArkoniaClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         EntityRendererRegistry.register(ArkoniaEntities.FROZEN_ZOMBIE, FrozenZombieRenderer::new);
+        EntityRendererRegistry.register(ArkoniaEntities.MOUNTAINEER, MountaineerRenderer::new);
         BlockRenderLayerMap.INSTANCE.putBlock(ArkoniaBlocks.MAPLE_LEAVES, RenderLayer.getCutout());
 
         SpriteIdentifierRegistry.INSTANCE.addIdentifier(new SpriteIdentifier(TexturedRenderLayers.SIGNS_ATLAS_TEXTURE, ArkoniaBlocks.MAPLE_SIGN_TEXTURE));

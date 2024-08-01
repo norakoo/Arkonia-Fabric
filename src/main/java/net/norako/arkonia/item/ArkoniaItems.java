@@ -28,6 +28,9 @@ public class ArkoniaItems {
     public static final Item FROZEN_ZOMBIE_SPAWN_EGG = registerItem("frozen_zombie_spawn_egg",
             new SpawnEggItem(ArkoniaEntities.FROZEN_ZOMBIE, 0xD9F2F2, 0x799C65,
                     new FabricItemSettings()));
+    public static final Item MOUNTAINEER_SPAWN_EGG = registerItem("mountaineer_spawn_egg",
+            new SpawnEggItem(ArkoniaEntities.MOUNTAINEER, 0xE8EDF1, 0x959B9B,
+                    new FabricItemSettings()));
     // NETHER
 
     // END
