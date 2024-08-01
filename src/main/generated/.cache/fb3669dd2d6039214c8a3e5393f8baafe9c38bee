@@ -1,0 +1,11 @@
+// 1.20.1	2024-08-01T17:19:51.9864679	Arkonia/Block Loot Tables
+350114dfe4d409e2d5078626531d2485f95ec0e7 data\arkonia\loot_tables\blocks\deepslate_magmitite_ore.json
+c6c76d55ec45aff2e39dd05847eb86ddcd8ebccb data\arkonia\loot_tables\blocks\deepslate_belite_ore.json
+d3eb9f078ed940b2e7976c53b4001fb402fe2be5 data\arkonia\loot_tables\blocks\deepslate_xyophite_ore.json
+22e22d7b56758954bbba4b6c295b1f2527a67a94 data\arkonia\loot_tables\blocks\maple_leaves.json
+f31a76ce35407d4cc6d7219b601bebcb2123df71 data\arkonia\loot_tables\blocks\maple_planks.json
+a99a8efd3fb2afbaf67f0fdccc23b4b2bfcb6316 data\arkonia\loot_tables\blocks\stripped_maple_wood.json
+81a738bbcca9267632410d25acaabb523cdf35c0 data\arkonia\loot_tables\blocks\maple_log.json
+02aa83813e060f81dc313c19ca239babb6d2252b data\arkonia\loot_tables\blocks\stripped_maple_log.json
+378113375ac6fdb6736168258e221c8f8794b07d data\arkonia\loot_tables\blocks\maple_wood.json
+0497d18fb759ad8a81fcefdf73915a8aba6658cd data\arkonia\loot_tables\blocks\deepslate_avidite_ore.json

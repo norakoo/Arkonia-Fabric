@@ -30,6 +30,7 @@ public class ArkoniaModelPovider extends FabricModelProvider {
         maple_pool.family(ArkoniaBlocks.MAPLE_FAMILY);
 
         blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.FROZEN_ZOMBIE_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
+        blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.JUNGLE_ZOMBIE_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.MOUNTAINEER_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         // NETHER
 

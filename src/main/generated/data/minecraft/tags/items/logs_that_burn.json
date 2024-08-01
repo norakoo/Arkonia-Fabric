@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "arkonia:maple_log",
+    "arkonia:maple_wood",
+    "arkonia:stripped_maple_log",
+    "arkonia:stripped_maple_wood"
+  ]
+}

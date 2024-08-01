@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_belite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "arkonia:deepslate_belite_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:belite_ingot_from_blasting_deepslate_belite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_deepslate_belite_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:belite_ingot_from_blasting_deepslate_belite_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -24,6 +24,31 @@
       "arkonia:frozen_zombie_death04"
     ]
   },
+  "jungle_zombie_ambient": {
+    "subtitle": "sounds.arkonia.jungle_zombie_ambient",
+    "sounds": [
+      "arkonia:jungle_zombie_idle01",
+      "arkonia:jungle_zombie_idle02",
+      "arkonia:jungle_zombie_idle03"
+    ]
+  },
+  "jungle_zombie_hurt": {
+    "subtitle": "sounds.arkonia.jungle_zombie_hurt",
+    "sounds": [
+      "arkonia:jungle_zombie_hurt01",
+      "arkonia:jungle_zombie_hurt02",
+      "arkonia:jungle_zombie_hurt03",
+      "arkonia:jungle_zombie_hurt04"
+    ]
+  },
+  "jungle_zombie_death": {
+    "subtitle": "sounds.arkonia.jungle_zombie_death",
+    "sounds": [
+      "arkonia:jungle_zombie_death01",
+      "arkonia:jungle_zombie_death02",
+      "arkonia:jungle_zombie_death03"
+    ]
+  },
   "mountaineer_ambient": {
     "subtitle": "sounds.arkonia.mountaineer_ambient",
     "sounds": [

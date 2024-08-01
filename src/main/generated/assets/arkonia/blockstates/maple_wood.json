@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "arkonia:block/maple_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "arkonia:block/maple_wood"
+    },
+    "axis=z": {
+      "model": "arkonia:block/maple_wood",
+      "x": 90
+    }
+  }
+}

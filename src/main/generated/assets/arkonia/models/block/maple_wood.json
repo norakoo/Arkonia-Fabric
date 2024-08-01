@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "arkonia:block/maple_log",
+    "side": "arkonia:block/maple_log"
+  }
+}
