@@ -24,6 +24,16 @@ public class ArkoniaLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ArkoniaBlocks.STRIPPED_MAPLE_LOG);
         addDrop(ArkoniaBlocks.STRIPPED_MAPLE_WOOD);
         addDrop(ArkoniaBlocks.MAPLE_LEAVES, leavesDrops(ArkoniaBlocks.MAPLE_LEAVES, Blocks.MANGROVE_PROPAGULE, 0.0025f)); // TODO Maple Sappling
+
+        addDrop(ArkoniaBlocks.MAPLE_STAIRS);
+        addDrop(ArkoniaBlocks.MAPLE_TRAPDOOR);
+        addDrop(ArkoniaBlocks.MAPLE_BUTTON);
+        addDrop(ArkoniaBlocks.MAPLE_PRESSURE_PLATE);
+        addDrop(ArkoniaBlocks.MAPLE_FENCE);
+        addDrop(ArkoniaBlocks.MAPLE_FENCE_GATE);
+
+        addDrop(ArkoniaBlocks.MAPLE_DOOR, doorDrops(ArkoniaBlocks.MAPLE_DOOR));
+        addDrop(ArkoniaBlocks.MAPLE_SLABS, slabDrops(ArkoniaBlocks.MAPLE_SLABS));
         // NETHER
 
         // END

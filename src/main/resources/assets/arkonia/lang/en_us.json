@@ -8,6 +8,7 @@
   "item.arkonia.frozen_zombie_spawn_egg": "Frozen Zombie Spawn Egg",
   "item.arkonia.mountaineer_spawn_egg": "Mountaineer Spawn Egg",
   "item.arkonia.jungle_zombie_spawn_egg": "Jungle Zombie Spawn Egg",
+  "item.arkonia.illusioner_spawn_egg": "Illusioner Spawn Egg",
 
   "itemgroup.arkonia_vanilla": "Arkonia: Vanilla",
 
@@ -25,6 +26,14 @@
   "block.arkonia.maple_wall_sign": "Maple Wall Sign",
   "block.arkonia.maple_hanging_sign": "Maple Hanging Sign",
   "block.arkonia.maple_wall_hanging_sign": "Maple Wall Hanging Sign",
+  "block.arkonia.maple_stairs": "Maple Stairs",
+  "block.arkonia.maple_slabs": "Maple Slabs",
+  "block.arkonia.maple_button": "Maple Button",
+  "block.arkonia.maple_pressure_plate": "Maple Pressure Plate",
+  "block.arkonia.maple_fence": "Maple Fence",
+  "block.arkonia.maple_fence_gate": "Maple Fence Gate",
+  "block.arkonia.maple_door": "Maple Door",
+  "block.arkonia.maple_trapdoor": "Maple Trapdoor",
 
   "entity.arkonia.frozen_zombie": "Frozen Zombie",
   "entity.arkonia.mountaineer": "Mountaineer",

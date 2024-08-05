@@ -34,5 +34,10 @@ public class ArkoniaBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(ArkoniaBlocks.MAPLE_WOOD)
                 .add(ArkoniaBlocks.STRIPPED_MAPLE_LOG)
                 .add(ArkoniaBlocks.STRIPPED_MAPLE_WOOD);
+
+        getOrCreateTagBuilder(BlockTags.FENCES)
+                .add(ArkoniaBlocks.MAPLE_FENCE);
+        getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+                .add(ArkoniaBlocks.MAPLE_FENCE_GATE);
     }
 }

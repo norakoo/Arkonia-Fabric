@@ -1,6 +1,7 @@
 package net.norako.arkonia.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -30,7 +31,13 @@ public class ArkoniaItems {
             new SpawnEggItem(ArkoniaEntities.JUNGLE_ZOMBIE, 0x97C284, 0x799C65,
                     new FabricItemSettings()));
     public static final Item MOUNTAINEER_SPAWN_EGG = registerItem("mountaineer_spawn_egg",
-            new SpawnEggItem(ArkoniaEntities.MOUNTAINEER, 0xE8EDF1, 0x959B9B,
+            new SpawnEggItem(ArkoniaEntities.MOUNTAINEER, 0x959B9B, 0xD9F2F2,
+                    new FabricItemSettings()));
+    public static final Item ILLUSIONER_SPAWN_EGG = registerItem("illusioner_spawn_egg",
+            new SpawnEggItem(EntityType.ILLUSIONER, 0x959B9B, 0x4D3852,
+                    new FabricItemSettings()));
+    public static final Item WINDCALLER_SPAWN_EGG = registerItem("windcaller_spawn_egg",
+            new SpawnEggItem(ArkoniaEntities.WINDCALLER, 0x959B9B, 0xD07444,
                     new FabricItemSettings()));
     // NETHER
 

@@ -76,5 +76,38 @@
       "arkonia:mountaineer_death03",
       "arkonia:mountaineer_death04"
     ]
+  },
+  "windcaller_ambient": {
+    "subtitle": "sounds.arkonia.windcaller_ambient",
+    "sounds": [
+      "arkonia:windcaller_idle01",
+      "arkonia:windcaller_idle02",
+      "arkonia:windcaller_idle03",
+      "arkonia:windcaller_idle04"
+    ]
+  },
+  "windcaller_hurt": {
+    "subtitle": "sounds.arkonia.windcaller_hurt",
+    "sounds": [
+      "arkonia:windcaller_hurt01",
+      "arkonia:windcaller_hurt02",
+      "arkonia:windcaller_hurt03",
+      "arkonia:windcaller_hurt04"
+    ]
+  },
+  "windcaller_death": {
+    "subtitle": "sounds.arkonia.windcaller_death",
+    "sounds": [
+      "arkonia:windcaller_death01",
+      "arkonia:windcaller_death02",
+      "arkonia:windcaller_death03",
+      "arkonia:windcaller_death04"
+    ]
+  },
+  "windcaller_polnareff": {
+    "subtitle": "sounds.arkonia.windcaller_polnareff",
+    "sounds": [
+      "arkonia:windcaller_polnareff"
+    ]
   }
 }

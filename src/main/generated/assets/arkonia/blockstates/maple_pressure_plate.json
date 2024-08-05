@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "arkonia:block/maple_pressure_plate"
+    },
+    "powered=true": {
+      "model": "arkonia:block/maple_pressure_plate_down"
+    }
+  }
+}

@@ -28,10 +28,21 @@ public class ArkoniaModelPovider extends FabricModelProvider {
 
         BlockStateModelGenerator.BlockTexturePool maple_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(ArkoniaBlocks.MAPLE_PLANKS);
         maple_pool.family(ArkoniaBlocks.MAPLE_FAMILY);
+        maple_pool.stairs(ArkoniaBlocks.MAPLE_STAIRS);
+        maple_pool.slab(ArkoniaBlocks.MAPLE_SLABS);
+        maple_pool.button(ArkoniaBlocks.MAPLE_BUTTON);
+        maple_pool.pressurePlate(ArkoniaBlocks.MAPLE_PRESSURE_PLATE);
+        maple_pool.fence(ArkoniaBlocks.MAPLE_FENCE);
+        maple_pool.fenceGate(ArkoniaBlocks.MAPLE_FENCE_GATE);
+
+        blockStateModelGenerator.registerDoor(ArkoniaBlocks.MAPLE_DOOR);
+        blockStateModelGenerator.registerTrapdoor(ArkoniaBlocks.MAPLE_TRAPDOOR);
 
         blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.FROZEN_ZOMBIE_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.JUNGLE_ZOMBIE_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.MOUNTAINEER_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
+        blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.ILLUSIONER_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
+        blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.WINDCALLER_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         // NETHER
 
         // END

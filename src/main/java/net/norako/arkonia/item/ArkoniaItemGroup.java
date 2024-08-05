@@ -20,6 +20,14 @@ public class ArkoniaItemGroup {
                         entries.add(ArkoniaBlocks.STRIPPED_MAPLE_LOG);
                         entries.add(ArkoniaBlocks.STRIPPED_MAPLE_WOOD);
                         entries.add(ArkoniaBlocks.MAPLE_PLANKS);
+                        entries.add(ArkoniaBlocks.MAPLE_STAIRS);
+                        entries.add(ArkoniaBlocks.MAPLE_SLABS);
+                        entries.add(ArkoniaBlocks.MAPLE_FENCE);
+                        entries.add(ArkoniaBlocks.MAPLE_FENCE_GATE);
+                        entries.add(ArkoniaBlocks.MAPLE_DOOR);
+                        entries.add(ArkoniaBlocks.MAPLE_TRAPDOOR);
+                        entries.add(ArkoniaBlocks.MAPLE_PRESSURE_PLATE);
+                        entries.add(ArkoniaBlocks.MAPLE_BUTTON);
                         entries.add(ArkoniaBlocks.MAPLE_LEAVES);
                         entries.add(ArkoniaItems.MAPLE_SIGN);
                         entries.add(ArkoniaItems.HANGING_MAPLE_SIGN);
@@ -38,6 +46,8 @@ public class ArkoniaItemGroup {
                         entries.add(ArkoniaItems.FROZEN_ZOMBIE_SPAWN_EGG);
                         entries.add(ArkoniaItems.JUNGLE_ZOMBIE_SPAWN_EGG);
                         entries.add(ArkoniaItems.MOUNTAINEER_SPAWN_EGG);
+                        entries.add(ArkoniaItems.ILLUSIONER_SPAWN_EGG);
+                        entries.add(ArkoniaItems.WINDCALLER_SPAWN_EGG);
                     }).build());
 
     public static void registerItemGroups() {

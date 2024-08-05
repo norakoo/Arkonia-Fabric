@@ -19,6 +19,10 @@ public class ArkoniaSounds {
     public static final SoundEvent MOUNTAINEER_AMBIENT = registerSoundEvent("mountaineer_ambient");
     public static final SoundEvent MOUNTAINEER_HURT = registerSoundEvent("mountaineer_hurt");
     public static final SoundEvent MOUNTAINEER_DEATH = registerSoundEvent("mountaineer_death");
+    public static final SoundEvent WINDCALLER_AMBIENT = registerSoundEvent("windcaller_ambient");
+    public static final SoundEvent WINDCALLER_HURT = registerSoundEvent("windcaller_hurt");
+    public static final SoundEvent WINDCALLER_DEATH = registerSoundEvent("windcaller_death");
+    public static final SoundEvent WINDCALLER_POLNAREFF = registerSoundEvent("windcaller_polnareff");
     // NETHER
 
     // END

@@ -1,5 +1,7 @@
-// 1.20.1	2024-08-01T17:19:51.9874708	Arkonia/Tags for minecraft:block
+// 1.20.1	2024-08-05T19:15:52.9465557	Arkonia/Tags for minecraft:block
 734f89e7e7490a1d22ac13d811df4526317933f9 data\minecraft\tags\blocks\mineable\pickaxe.json
 54359ef3ced38498d3d7c1ab54a0e34f357ae21a data\minecraft\tags\blocks\needs_iron_tool.json
+4a52b76a023ac6b788826b860226cf1695e98ef9 data\minecraft\tags\blocks\fence_gates.json
 7669999267baee78efeddc803c006f713954207d data\minecraft\tags\blocks\needs_diamond_tool.json
+2e461d71d2712d4876d0d0a29d2968a606cec1d9 data\minecraft\tags\blocks\fences.json
 c46371d314bdb3882e9ae589312637a8b2ba1903 data\minecraft\tags\blocks\logs_that_burn.json

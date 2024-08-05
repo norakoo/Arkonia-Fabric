@@ -39,7 +39,6 @@ import java.util.*;
 import java.util.function.Predicate;
 
 public class MountaineerEntity extends RaiderEntity implements GeoEntity {
-    static final Predicate<ItemEntity> OBTAINABLE_OMINOUS_BANNER_PREDICATE;
     static final Predicate<Difficulty> DIFFICULTY_ALLOWS_DOOR_BREAKING_PREDICATE = (difficulty) -> {
         return difficulty == Difficulty.NORMAL || difficulty == Difficulty.HARD;
     };
@@ -47,9 +46,6 @@ public class MountaineerEntity extends RaiderEntity implements GeoEntity {
 
     public MountaineerEntity(EntityType<? extends RaiderEntity> entityType, World world) {
         super(entityType, world);
-        this.equipInitialGear();
-        ItemStack ominousBanner = new ItemStack(Raid.getOminousBanner().getItem());
-        this.equipStack(EquipmentSlot.HEAD, ominousBanner);
     }
 
     private void equipInitialGear() {
@@ -65,48 +61,6 @@ public class MountaineerEntity extends RaiderEntity implements GeoEntity {
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3499999940395355f)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 1.0f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 12.0);
-    }
-
-    static {
-        OBTAINABLE_OMINOUS_BANNER_PREDICATE = (itemEntity) -> {
-            return !itemEntity.cannotPickup() && itemEntity.isAlive() && ItemStack.areEqual(itemEntity.getStack(), Raid.getOminousBanner());
-        };
-    }
-
-    public class PickupBannerAsLeaderGoal<T extends MountaineerEntity> extends Goal {
-        private final T actor;
-
-        public PickupBannerAsLeaderGoal(T actor) {
-            this.actor = actor;
-            this.setControls(EnumSet.of(Control.MOVE));
-        }
-
-        public boolean canStart() {
-            Raid raid = this.actor.getRaid();
-            if (this.actor.hasActiveRaid() && !this.actor.getRaid().isFinished() && this.actor.canLead() && !ItemStack.areEqual(this.actor.getEquippedStack(EquipmentSlot.HEAD), Raid.getOminousBanner())) {
-                RaiderEntity raiderEntity = raid.getCaptain(this.actor.getWave());
-                if (raiderEntity == null || !raiderEntity.isAlive()) {
-                    List<ItemEntity> list = this.actor.getWorld().getEntitiesByClass(ItemEntity.class, this.actor.getBoundingBox().expand(16.0, 8.0, 16.0), MountaineerEntity.OBTAINABLE_OMINOUS_BANNER_PREDICATE);
-                    if (!list.isEmpty()) {
-                        return this.actor.getNavigation().startMovingTo((Entity)list.get(0), 1.149999976158142);
-                    }
-                }
-
-                return false;
-            } else {
-                return false;
-            }
-        }
-
-        public void tick() {
-            if (this.actor.getNavigation().getTargetPos().isWithinDistance(this.actor.getPos(), 1.414)) {
-                List<ItemEntity> list = this.actor.getWorld().getEntitiesByClass(ItemEntity.class, this.actor.getBoundingBox().expand(4.0, 4.0, 4.0), MountaineerEntity.OBTAINABLE_OMINOUS_BANNER_PREDICATE);
-                if (!list.isEmpty()) {
-                    this.actor.loot((ItemEntity)list.get(0));
-                }
-            }
-
-        }
     }
 
     @Override

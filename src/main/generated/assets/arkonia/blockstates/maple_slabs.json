@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "arkonia:block/maple_slabs"
+    },
+    "type=double": {
+      "model": "arkonia:block/maple_planks"
+    },
+    "type=top": {
+      "model": "arkonia:block/maple_slabs_top"
+    }
+  }
+}
