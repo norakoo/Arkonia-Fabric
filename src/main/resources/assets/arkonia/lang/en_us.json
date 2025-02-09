@@ -9,6 +9,7 @@
   "item.arkonia.mountaineer_spawn_egg": "Mountaineer Spawn Egg",
   "item.arkonia.jungle_zombie_spawn_egg": "Jungle Zombie Spawn Egg",
   "item.arkonia.illusioner_spawn_egg": "Illusioner Spawn Egg",
+  "item.arkonia.windcaller_spawn_egg": "Windcaller Spawn Egg",
 
   "itemgroup.arkonia_vanilla": "Arkonia: Vanilla",
 
@@ -37,5 +38,20 @@
 
   "entity.arkonia.frozen_zombie": "Frozen Zombie",
   "entity.arkonia.mountaineer": "Mountaineer",
-  "entity.arkonia.jungle_zombie": "Jungle Zombie"
+  "entity.arkonia.jungle_zombie": "Jungle Zombie",
+  "entity.arkonia.windcaller": "Windcaller",
+
+  "sounds.arkonia.frozen_zombie_ambient": "Frozen Zombie Idle",
+  "sounds.arkonia.frozen_zombie_hurt": "Frozen Zombie Hurt",
+  "sounds.arkonia.frozen_zombie_death": "Frozen Zombie Die",
+  "sounds.arkonia.jungle_zombie_ambient": "Jungle Zombie Idle",
+  "sounds.arkonia.jungle_zombie_hurt": "Jungle Zombie Hurt",
+  "sounds.arkonia.jungle_zombie_death": "Jungle Zombie Die",
+  "sounds.arkonia.mountaineer_ambient": "Mountaineer Grunt",
+  "sounds.arkonia.mountaineer_hurt": "Mountaineer Hurt",
+  "sounds.arkonia.mountaineer_death": "Mountaineer Die",
+  "sounds.arkonia.windcaller_ambient": "Windcaller Grunt",
+  "sounds.arkonia.windcaller_hurt": "Windcaller Hurt",
+  "sounds.arkonia.windcaller_death": "Windcaller Die",
+  "sounds.arkonia.windcaller_polnareff": "Shirubā Chariottsu"
 }

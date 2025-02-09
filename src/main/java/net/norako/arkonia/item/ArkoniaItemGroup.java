@@ -42,6 +42,7 @@ public class ArkoniaItemGroup {
                         entries.add(ArkoniaItems.BELITE_INGOT);
                         entries.add(ArkoniaBlocks.DEEPSLATE_AVIDITE_ORE);
                         entries.add(ArkoniaItems.AVIDITE_INGOT);
+                        entries.add(ArkoniaBlocks.NETHER_ONYX_ORE);
 
                         entries.add(ArkoniaItems.FROZEN_ZOMBIE_SPAWN_EGG);
                         entries.add(ArkoniaItems.JUNGLE_ZOMBIE_SPAWN_EGG);

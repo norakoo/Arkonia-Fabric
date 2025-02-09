@@ -1,9 +1,10 @@
-// 1.20.1	2024-08-05T19:15:52.9445358	Arkonia/Model Definitions
+// 1.20.1	2025-02-09T13:28:34.150569	Arkonia/Model Definitions
 1d3eec2552044fe6b6852fb64a649ae6f8564de9 assets\arkonia\models\block\maple_trapdoor_open.json
 93f9f4877fe56d41ad17a9d91e32699fc0692037 assets\arkonia\models\item\deepslate_xyophite_ore.json
 3f7cd4c5ed121f0be4beee4d8bc41f0c1576aa9b assets\arkonia\models\item\deepslate_avidite_ore.json
 d0d201f2e4cfef408897eb84fca56d368f16531d assets\arkonia\models\block\maple_door_top_left.json
 1a5603622f2bb1f719a843dd3b56a18f15edc083 assets\arkonia\blockstates\maple_leaves.json
+e7e85e96c065d947699fe788de5f72439cd79253 assets\arkonia\blockstates\nether_onyx_ore.json
 cc112d926711288d73dfae6ff3d296811c7c5e2a assets\arkonia\models\item\maple_trapdoor.json
 2bd5ed241815770868b5f7bb7843513c1e0a701d assets\arkonia\blockstates\maple_trapdoor.json
 1ab3e90684124c06ab00138a62fda509dd71a3ad assets\arkonia\models\block\maple_standing_sign.json
@@ -53,6 +54,7 @@ a5879f7fded358227de2af3816e16168941cfb11 assets\arkonia\models\item\maple_sign.j
 1866cf1789607b17cc83d4c8a852ee5715ccc98a assets\arkonia\models\item\maple_log.json
 8b8f67e3f38a276021932e5eb7862615926b8908 assets\arkonia\models\block\maple_log.json
 c762a13a1d2ed3807c04937a585c282d7bcbf415 assets\arkonia\models\block\maple_fence_gate_wall_open.json
+192e1bb4616f1b685e585f1460e28e3e6418c721 assets\arkonia\models\block\nether_onyx_ore.json
 50f1c6e342d7790eec847e503f3696d56458889c assets\arkonia\models\block\maple_door_bottom_left_open.json
 c07ff5b9fca4f87de778add37d538a86d221d1ac assets\arkonia\blockstates\maple_wood.json
 5fbaa62c7932c67e7fa814968042c340728b009a assets\arkonia\models\block\maple_fence_inventory.json
@@ -63,6 +65,7 @@ e8a00ae49b33ffc17f0841734a4fa36cf0600f2c assets\arkonia\models\block\stripped_ma
 30ed1c47f9a7d787c8a1e8cc4723b76d8b712ec1 assets\arkonia\blockstates\maple_slabs.json
 7050831a1836954c784fe1e0abbe2ad3cf3de780 assets\arkonia\models\block\maple_button_pressed.json
 fd9007a0bc168bd7f7cba98e476fee982b97acb3 assets\arkonia\models\item\maple_door.json
+ff9f4a0bb72ca1f234fce569e5454048a6dbcc1c assets\arkonia\models\item\nether_onyx_ore.json
 a950ec67b3b63b9d214f2de836beec1a8f55e862 assets\arkonia\blockstates\stripped_maple_wood.json
 474b021e234ae1d33d63c0f2c13b927511102085 assets\arkonia\models\block\maple_stairs_inner.json
 94fbe704941c819a359a0466adbf54061713c1c9 assets\arkonia\models\block\maple_button.json

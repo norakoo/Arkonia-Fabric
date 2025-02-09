@@ -11,7 +11,9 @@ import net.norako.arkonia.block.ArkoniaBlocks;
 import net.norako.arkonia.entity.ArkoniaEntities;
 
 public class ArkoniaItems {
+
     // OVERWORLD
+
     public static final Item RAW_MAGMITITE = registerItem("raw_magmitite", new Item(new FabricItemSettings()));
     public static final Item MAGMITITE_INGOT = registerItem("magmitite_ingot", new Item(new FabricItemSettings()));
     public static final Item RAW_XYOPHITE = registerItem("raw_xyophite", new Item(new FabricItemSettings()));
@@ -39,6 +41,7 @@ public class ArkoniaItems {
     public static final Item WINDCALLER_SPAWN_EGG = registerItem("windcaller_spawn_egg",
             new SpawnEggItem(ArkoniaEntities.WINDCALLER, 0x959B9B, 0xD07444,
                     new FabricItemSettings()));
+
     // NETHER
 
     // END

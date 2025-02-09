@@ -5,13 +5,16 @@ import com.google.common.collect.Maps;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.entity.*;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.NoPenaltyTargeting;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.mob.*;
+import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.mob.RavagerEntity;
 import net.minecraft.entity.passive.IronGolemEntity;
 import net.minecraft.entity.passive.MerchantEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -24,43 +27,42 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.village.raid.Raid;
-import net.minecraft.world.*;
+import net.minecraft.world.Difficulty;
+import net.minecraft.world.World;
 import net.minecraft.world.poi.PointOfInterestStorage;
 import net.minecraft.world.poi.PointOfInterestTypes;
 import net.norako.arkonia.sound.ArkoniaSounds;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animation.*;
-import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.core.object.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
 import java.util.*;
 import java.util.function.Predicate;
 
-public class MountaineerEntity extends RaiderEntity implements GeoEntity {
+public class IceologerEntity extends RaiderEntity implements GeoEntity {
     static final Predicate<Difficulty> DIFFICULTY_ALLOWS_DOOR_BREAKING_PREDICATE = (difficulty) -> {
         return difficulty == Difficulty.NORMAL || difficulty == Difficulty.HARD;
     };
     private AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public MountaineerEntity(EntityType<? extends RaiderEntity> entityType, World world) {
+    public IceologerEntity(EntityType<? extends RaiderEntity> entityType, World world) {
         super(entityType, world);
-        this.equipStack(EquipmentSlot.FEET, new ItemStack(Items.LEATHER_BOOTS));
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return RaiderEntity.createHostileAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 40.0D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 9.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3499999940395355f)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 25.0D)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 8.0f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
                 .add(EntityAttributes.GENERIC_ATTACK_SPEED, 1.0f)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 12.0);
     }
 
     @Override
     public void addBonusForWave(int wave, boolean unused) {
-        ItemStack itemStack = new ItemStack(Items.IRON_PICKAXE);
+        ItemStack itemStack = new ItemStack(Items.ICE);
         Raid raid = this.getRaid();
         int i = 1;
         if (wave > raid.getMaxWaves(Difficulty.NORMAL)) {
@@ -77,12 +79,11 @@ public class MountaineerEntity extends RaiderEntity implements GeoEntity {
         this.equipStack(EquipmentSlot.MAINHAND, itemStack);
     }
 
-
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.goalSelector.add(1, new MountaineerEntity.BreakDoorGoal(this));
-        this.goalSelector.add(4, new MountaineerEntity.AttackGoal(this));
+        this.goalSelector.add(1, new IceologerEntity.BreakDoorGoal(this));
+        this.goalSelector.add(4, new IceologerEntity.AttackGoal(this));
         this.targetSelector.add(2, new ActiveTargetGoal(this, PlayerEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal(this, MerchantEntity.class, true));
         this.targetSelector.add(3, new ActiveTargetGoal(this, IronGolemEntity.class, true));
@@ -91,13 +92,13 @@ public class MountaineerEntity extends RaiderEntity implements GeoEntity {
         this.goalSelector.add(10, new LookAtEntityGoal(this, MobEntity.class, 8.0F));
         this.goalSelector.add(1, new PickupBannerAsLeaderGoal(this));
         this.goalSelector.add(3, new MoveToRaidCenterGoal(this));
-        this.goalSelector.add(4, new AttackHomeGoal(this, 1.0499999523162842, 1));
-        this.goalSelector.add(5, new CelebrateGoal(this));
+        this.goalSelector.add(4, new IceologerEntity.AttackHomeGoal(this, 1.0499999523162842, 1));
+        this.goalSelector.add(5, new IceologerEntity.CelebrateGoal(this));
     }
 
     class AttackGoal extends MeleeAttackGoal {
-        public AttackGoal(MountaineerEntity mountaineer) {
-            super(mountaineer, 1.0, false);
+        public AttackGoal(IceologerEntity iceologer) {
+            super(iceologer, 1.0, false);
         }
 
         protected double getSquaredMaxAttackDistance(LivingEntity entity) {
@@ -111,14 +112,14 @@ public class MountaineerEntity extends RaiderEntity implements GeoEntity {
     }
 
     static class AttackHomeGoal extends Goal {
-        private final MountaineerEntity raider;
+        private final IceologerEntity raider;
         private final double speed;
         private BlockPos home;
         private final List<BlockPos> lastHomes = Lists.newArrayList();
         private final int distance;
         private boolean finished;
 
-        public AttackHomeGoal(MountaineerEntity raider, double speed, int distance) {
+        public AttackHomeGoal(IceologerEntity raider, double speed, int distance) {
             this.raider = raider;
             this.speed = speed;
             this.distance = distance;
@@ -213,18 +214,18 @@ public class MountaineerEntity extends RaiderEntity implements GeoEntity {
 
     static class BreakDoorGoal extends net.minecraft.entity.ai.goal.BreakDoorGoal {
         public BreakDoorGoal(MobEntity mobEntity) {
-            super(mobEntity, 6, MountaineerEntity.DIFFICULTY_ALLOWS_DOOR_BREAKING_PREDICATE);
+            super(mobEntity, 6, IceologerEntity.DIFFICULTY_ALLOWS_DOOR_BREAKING_PREDICATE);
             this.setControls(EnumSet.of(Control.MOVE));
         }
 
         public boolean shouldContinue() {
-            MountaineerEntity mountaineerEntity = (MountaineerEntity)this.mob;
-            return mountaineerEntity.hasActiveRaid() && super.shouldContinue();
+            IceologerEntity iceologerEntity = (IceologerEntity) this.mob;
+            return iceologerEntity.hasActiveRaid() && super.shouldContinue();
         }
 
         public boolean canStart() {
-            MountaineerEntity mountaineerEntity = (MountaineerEntity)this.mob;
-            return mountaineerEntity.hasActiveRaid() && mountaineerEntity.random.nextInt(toGoalTicks(10)) == 0 && super.canStart();
+            IceologerEntity iceologerEntity = (IceologerEntity) this.mob;
+            return iceologerEntity.hasActiveRaid() && iceologerEntity.random.nextInt(toGoalTicks(10)) == 0 && super.canStart();
         }
 
         public void start() {
@@ -234,9 +235,9 @@ public class MountaineerEntity extends RaiderEntity implements GeoEntity {
     }
 
     public class CelebrateGoal extends Goal {
-        private final MountaineerEntity raider;
+        private final IceologerEntity raider;
 
-        CelebrateGoal(MountaineerEntity raider) {
+        CelebrateGoal(IceologerEntity raider) {
             this.raider = raider;
             this.setControls(EnumSet.of(Control.MOVE));
         }
@@ -258,7 +259,7 @@ public class MountaineerEntity extends RaiderEntity implements GeoEntity {
 
         public void tick() {
             if (!this.raider.isSilent() && this.raider.random.nextInt(this.getTickCount(100)) == 0) {
-                MountaineerEntity.this.playSound(MountaineerEntity.this.getCelebratingSound(), MountaineerEntity.this.getSoundVolume(), MountaineerEntity.this.getSoundPitch());
+                IceologerEntity.this.playSound(IceologerEntity.this.getCelebratingSound(), IceologerEntity.this.getSoundVolume(), IceologerEntity.this.getSoundPitch());
             }
 
             if (!this.raider.hasVehicle() && this.raider.random.nextInt(this.getTickCount(50)) == 0) {
@@ -271,53 +272,43 @@ public class MountaineerEntity extends RaiderEntity implements GeoEntity {
 
     @Override
     public SoundEvent getCelebratingSound() {
-        return SoundEvents.ENTITY_VINDICATOR_CELEBRATE;
+        return SoundEvents.ENTITY_EVOKER_CELEBRATE;
     }
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return ArkoniaSounds.MOUNTAINEER_AMBIENT;
+        return ArkoniaSounds.ICEOLOGER_AMBIENT;
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return ArkoniaSounds.MOUNTAINEER_HURT;
+        return ArkoniaSounds.ICEOLOGER_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return ArkoniaSounds.MOUNTAINEER_DEATH;
+        return ArkoniaSounds.ICEOLOGER_DEATH;
     }
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
         controllers.add(new AnimationController<>(this, "controller", 0, this::predicate));
-        controllers.add(new AnimationController<>(this, "attackController", 0, this::attackPredicate));
     }
 
-    private PlayState attackPredicate(AnimationState<MountaineerEntity> mountaineerEntityAnimationState) {
-        if(this.handSwinging && mountaineerEntityAnimationState.getController().getAnimationState().equals(AnimationController.State.STOPPED)) {
-            mountaineerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.mountaineer.right.attack_fast", Animation.LoopType.DEFAULT));
-            this.handSwinging = false;
-        }
-
-        return PlayState.CONTINUE;
-    }
-
-    private PlayState predicate(AnimationState<MountaineerEntity> mountaineerEntityAnimationState) {
-        if(mountaineerEntityAnimationState.isMoving()) {
-            mountaineerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.mountaineer.right.walk", Animation.LoopType.LOOP));
+    private PlayState predicate(AnimationState<IceologerEntity> iceologerEntityAnimationState) {
+        if(iceologerEntityAnimationState.isMoving()) {
+            iceologerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("geomancer_walk", Animation.LoopType.LOOP));
             return PlayState.CONTINUE;
         } else {
             if (this.isCelebrating()) {
-                mountaineerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.mountaineer.celebrate", Animation.LoopType.LOOP));
+                iceologerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("iceologer_celebrate", Animation.LoopType.LOOP));
                 return PlayState.CONTINUE;
             } else {
-                mountaineerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.mountaineer.idle", Animation.LoopType.LOOP));
+                iceologerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("iceologer_idle", Animation.LoopType.LOOP));
             }
         }
 
-        mountaineerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.mountaineer.idle", Animation.LoopType.LOOP));
+        iceologerEntityAnimationState.getController().setAnimation(RawAnimation.begin().then("iceologer_idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 

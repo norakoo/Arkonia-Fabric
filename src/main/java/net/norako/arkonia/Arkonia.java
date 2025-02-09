@@ -8,10 +8,12 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.norako.arkonia.block.ArkoniaBlocks;
 import net.norako.arkonia.entity.ArkoniaEntities;
+import net.norako.arkonia.entity.client.overworld.illagers.IceologerRenderer;
 import net.norako.arkonia.entity.client.overworld.illagers.WindCallerRenderer;
 import net.norako.arkonia.entity.client.overworld.zombies.FrozenZombieRenderer;
 import net.norako.arkonia.entity.client.overworld.illagers.MountaineerRenderer;
 import net.norako.arkonia.entity.client.overworld.zombies.JungleZombieRenderer;
+import net.norako.arkonia.entity.custom.overworld.illagers.IceologerEntity;
 import net.norako.arkonia.entity.custom.overworld.illagers.WindCallerEntity;
 import net.norako.arkonia.entity.custom.overworld.zombies.FrozenZombieEntity;
 import net.norako.arkonia.entity.custom.overworld.illagers.MountaineerEntity;
@@ -46,11 +48,13 @@ public class Arkonia implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ArkoniaEntities.JUNGLE_ZOMBIE, JungleZombieEntity.setAttributes());
 		FabricDefaultAttributeRegistry.register(ArkoniaEntities.MOUNTAINEER, MountaineerEntity.setAttributes());
 		FabricDefaultAttributeRegistry.register(ArkoniaEntities.WINDCALLER, WindCallerEntity.setAttributes());
+		FabricDefaultAttributeRegistry.register(ArkoniaEntities.ICEOLOGER, IceologerEntity.setAttributes());
 
 		EntityRendererRegistry.register(ArkoniaEntities.FROZEN_ZOMBIE, FrozenZombieRenderer::new);
 		EntityRendererRegistry.register(ArkoniaEntities.MOUNTAINEER, MountaineerRenderer::new);
 		EntityRendererRegistry.register(ArkoniaEntities.JUNGLE_ZOMBIE, JungleZombieRenderer::new);
 		EntityRendererRegistry.register(ArkoniaEntities.WINDCALLER, WindCallerRenderer::new);
+		EntityRendererRegistry.register(ArkoniaEntities.ICEOLOGER, IceologerRenderer::new);
 
 		FlammableBlockRegistry.getDefaultInstance().add(ArkoniaBlocks.MAPLE_LOG, 5, 5);
 		FlammableBlockRegistry.getDefaultInstance().add(ArkoniaBlocks.MAPLE_WOOD, 5, 5);

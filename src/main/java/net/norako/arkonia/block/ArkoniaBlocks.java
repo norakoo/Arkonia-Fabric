@@ -17,7 +17,9 @@ import net.minecraft.util.Identifier;
 import net.norako.arkonia.Arkonia;
 
 public class ArkoniaBlocks {
+
     // OVERWORLD
+
     public static final Block DEEPSLATE_MAGMITITE_ORE = registerBlock("deepslate_magmitite_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_IRON_ORE)));
     public static final Block DEEPSLATE_XYOPHITE_ORE = registerBlock("deepslate_xyophite_ore",
@@ -73,7 +75,11 @@ public class ArkoniaBlocks {
     public static final BlockFamily MAPLE_FAMILY = BlockFamilies.register(ArkoniaBlocks.MAPLE_PLANKS)
             .sign(ArkoniaBlocks.STANDING_MAPLE_SIGN, ArkoniaBlocks.WALL_MAPLE_SIGN)
             .group("wooden").unlockCriterionName("has_planks").build();
+
     // NETHER
+
+    public static final Block NETHER_ONYX_ORE = registerBlock("nether_onyx_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.NETHER_GOLD_ORE)));
 
     // END
 

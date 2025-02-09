@@ -3,6 +3,7 @@ package net.norako.arkonia.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
 import net.norako.arkonia.block.ArkoniaBlocks;
 import net.norako.arkonia.item.ArkoniaItems;
 
@@ -34,7 +35,10 @@ public class ArkoniaLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ArkoniaBlocks.MAPLE_DOOR, doorDrops(ArkoniaBlocks.MAPLE_DOOR));
         addDrop(ArkoniaBlocks.MAPLE_SLABS, slabDrops(ArkoniaBlocks.MAPLE_SLABS));
+
         // NETHER
+
+        addDrop(ArkoniaBlocks.NETHER_ONYX_ORE, oreDrops(ArkoniaBlocks.NETHER_ONYX_ORE, Items.FEATHER));
 
         // END
 

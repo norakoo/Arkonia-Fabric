@@ -20,11 +20,14 @@ import net.norako.arkonia.block.ArkoniaBlocks;
 import java.util.List;
 
 public class ArkoniaConfiguredFeatures {
+
     // OVERWORLD
+
     public static final RegistryKey<ConfiguredFeature<?, ?>> MAGMITITE_ORE_KEY = registerKey("magmitite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> XYOPHITE_ORE_KEY = registerKey("xyophite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> BELITE_ORE_KEY = registerKey("belite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>> AVIDITE_ORE_KEY = registerKey("avidite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> NETHER_ONYX_ORE_KEY = registerKey("nether_onyx_ore_key");
 
     // NETHER
 
@@ -36,6 +39,8 @@ public class ArkoniaConfiguredFeatures {
         RuleTest netherReplacables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
         RuleTest endReplacables = new BlockMatchRuleTest(Blocks.END_STONE);
 
+        // OVERWORLD
+
         List<OreFeatureConfig.Target> overworldMagmititeOres =
                 List.of(OreFeatureConfig.createTarget(deepslateReplacables, ArkoniaBlocks.DEEPSLATE_MAGMITITE_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> overworldXyophiteOres =
@@ -45,10 +50,18 @@ public class ArkoniaConfiguredFeatures {
         List<OreFeatureConfig.Target> overworldAviditeOres =
                 List.of(OreFeatureConfig.createTarget(deepslateReplacables, ArkoniaBlocks.DEEPSLATE_AVIDITE_ORE.getDefaultState()));
 
+        // NETHER
+
+        List<OreFeatureConfig.Target> netherNetherOnyxOre =
+                List.of(OreFeatureConfig.createTarget(netherReplacables, ArkoniaBlocks.NETHER_ONYX_ORE.getDefaultState()));
+
+        // END
+
         register(context, MAGMITITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldMagmititeOres, 8));
         register(context, XYOPHITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldXyophiteOres, 8));
         register(context, BELITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldBeliteOres, 6));
         register(context, AVIDITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(overworldAviditeOres, 6));
+        register(context, NETHER_ONYX_ORE_KEY, Feature.ORE, new OreFeatureConfig(netherNetherOnyxOre, 10));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

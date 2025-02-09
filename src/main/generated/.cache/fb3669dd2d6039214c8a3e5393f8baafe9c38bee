@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-05T19:15:52.9445358	Arkonia/Block Loot Tables
+// 1.20.1	2025-02-09T13:28:34.1500687	Arkonia/Block Loot Tables
 c6c76d55ec45aff2e39dd05847eb86ddcd8ebccb data\arkonia\loot_tables\blocks\deepslate_belite_ore.json
 22e22d7b56758954bbba4b6c295b1f2527a67a94 data\arkonia\loot_tables\blocks\maple_leaves.json
 45e4d557077d52a07b88c2af237e882c933b1a9e data\arkonia\loot_tables\blocks\maple_fence.json
@@ -13,6 +13,7 @@ cd6f018647080ab9be962f8adfc264d856179a98 data\arkonia\loot_tables\blocks\maple_t
 222272090940ea9f88f2c09f9fd8ed418aacdd0e data\arkonia\loot_tables\blocks\maple_slabs.json
 f31a76ce35407d4cc6d7219b601bebcb2123df71 data\arkonia\loot_tables\blocks\maple_planks.json
 a99a8efd3fb2afbaf67f0fdccc23b4b2bfcb6316 data\arkonia\loot_tables\blocks\stripped_maple_wood.json
+372949aa7fa227272bcb746fa7d35913d93d998d data\arkonia\loot_tables\blocks\nether_onyx_ore.json
 a429efccf5132ab462849edd73851d09393168fe data\arkonia\loot_tables\blocks\maple_fence_gate.json
 378113375ac6fdb6736168258e221c8f8794b07d data\arkonia\loot_tables\blocks\maple_wood.json
 0497d18fb759ad8a81fcefdf73915a8aba6658cd data\arkonia\loot_tables\blocks\deepslate_avidite_ore.json

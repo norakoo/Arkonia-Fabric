@@ -48,7 +48,9 @@ public class ArkoniaRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
+
         // OVERWORLD
+
         offerSmelting(exporter, MAGMITITE_SMELTABLE, RecipeCategory.MISC, ArkoniaItems.MAGMITITE_INGOT,
                 0.7f, 200, "magmitite_ingot");
         offerBlasting(exporter, MAGMITITE_SMELTABLE, RecipeCategory.MISC, ArkoniaItems.MAGMITITE_INGOT,

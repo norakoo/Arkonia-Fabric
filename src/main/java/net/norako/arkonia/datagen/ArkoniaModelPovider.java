@@ -16,7 +16,9 @@ public class ArkoniaModelPovider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+
         // OVERWORLD
+
         blockStateModelGenerator.registerSimpleCubeAll(ArkoniaBlocks.DEEPSLATE_MAGMITITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ArkoniaBlocks.DEEPSLATE_XYOPHITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ArkoniaBlocks.DEEPSLATE_BELITE_ORE);
@@ -43,7 +45,10 @@ public class ArkoniaModelPovider extends FabricModelProvider {
         blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.MOUNTAINEER_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.ILLUSIONER_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         blockStateModelGenerator.registerParentedItemModel(ArkoniaItems.WINDCALLER_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
+
         // NETHER
+
+        blockStateModelGenerator.registerSimpleCubeAll(ArkoniaBlocks.NETHER_ONYX_ORE);
 
         // END
 
@@ -51,7 +56,9 @@ public class ArkoniaModelPovider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+
         // OVERWORLD
+
         itemModelGenerator.register(ArkoniaItems.RAW_MAGMITITE, Models.GENERATED);
         itemModelGenerator.register(ArkoniaItems.MAGMITITE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ArkoniaItems.RAW_XYOPHITE, Models.GENERATED);
@@ -60,6 +67,7 @@ public class ArkoniaModelPovider extends FabricModelProvider {
         itemModelGenerator.register(ArkoniaItems.AVIDITE_INGOT, Models.GENERATED);
 
         itemModelGenerator.register(ArkoniaItems.HANGING_MAPLE_SIGN, Models.GENERATED);
+
         // NETHER
 
         // END

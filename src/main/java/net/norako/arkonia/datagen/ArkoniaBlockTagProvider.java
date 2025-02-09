@@ -19,7 +19,8 @@ public class ArkoniaBlockTagProvider extends FabricTagProvider.BlockTagProvider 
                 .add(ArkoniaBlocks.DEEPSLATE_MAGMITITE_ORE)
                 .add(ArkoniaBlocks.DEEPSLATE_XYOPHITE_ORE)
                 .add(ArkoniaBlocks.DEEPSLATE_BELITE_ORE)
-                .add(ArkoniaBlocks.DEEPSLATE_AVIDITE_ORE);
+                .add(ArkoniaBlocks.DEEPSLATE_AVIDITE_ORE)
+                .add(ArkoniaBlocks.NETHER_ONYX_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ArkoniaBlocks.DEEPSLATE_MAGMITITE_ORE)
@@ -27,7 +28,8 @@ public class ArkoniaBlockTagProvider extends FabricTagProvider.BlockTagProvider 
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ArkoniaBlocks.DEEPSLATE_BELITE_ORE)
-                .add(ArkoniaBlocks.DEEPSLATE_AVIDITE_ORE);
+                .add(ArkoniaBlocks.DEEPSLATE_AVIDITE_ORE)
+                .add(ArkoniaBlocks.NETHER_ONYX_ORE);
 
         getOrCreateTagBuilder(BlockTags.LOGS_THAT_BURN)
                 .add(ArkoniaBlocks.MAPLE_LOG)

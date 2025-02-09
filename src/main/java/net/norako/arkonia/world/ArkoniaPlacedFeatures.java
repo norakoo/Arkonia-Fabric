@@ -16,13 +16,17 @@ import net.norako.arkonia.Arkonia;
 import java.util.List;
 
 public class ArkoniaPlacedFeatures {
+
     // OVERWORLD
+
     public static final RegistryKey<PlacedFeature> MAGMITITE_ORE_PLACED_KEY = registerKey("magmitite_ore_placed");
     public static final RegistryKey<PlacedFeature> XYOPHITE_ORE_PLACED_KEY = registerKey("xyophite_ore_placed");
     public static final RegistryKey<PlacedFeature> BELITE_ORE_PLACED_KEY = registerKey("belite_ore_placed");
     public static final RegistryKey<PlacedFeature> AVIDITE_ORE_PLACED_KEY = registerKey("avidite_ore_placed");
 
     // NETHER
+
+    public static final RegistryKey<PlacedFeature> NETHER_ONYX_ORE_PLACED_KEY = registerKey("nether_onyx_ore_placed");
 
     // END
 
@@ -41,6 +45,9 @@ public class ArkoniaPlacedFeatures {
         register(context, AVIDITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ArkoniaConfiguredFeatures.AVIDITE_ORE_KEY),
                 ArkoniaOrePlacement.modifiersWithCount(8,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(15))));
+        register(context, NETHER_ONYX_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ArkoniaConfiguredFeatures.NETHER_ONYX_ORE_KEY),
+                ArkoniaOrePlacement.modifiersWithCount(4,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(100))));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
